@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "libft.h"
 
 int intlen(long nb)
 {
@@ -45,10 +45,4 @@ char *ft_itoi(int nb)
 		i--;
 	}
 	return (str);
-}
-
-#include <stdio.h>
-int main()
-{
-	printf("%d",itoa(1337));
 }

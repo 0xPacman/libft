@@ -1,10 +1,31 @@
-NAME= libft.a
+SRC = $(wildcard *.c)
 
-CFLAGS = -Wextra -Wall -Werror
-CC = gcc $(CFLAGS)
-SRCS = $(shell find . -type f -name "*.c")
-HEADERS = $(shell find . -type f -name "*.h")
-RM = rm -rf
-OBJDIR = .obj
-OBJS = $(patsubst %.c, $(OBJDIR)/%.o, $(SRCS))
+CFLAGS = -Wall -Wextra -Werror
 
+OBJECTS = $(SRC:.c=.o)
+
+NAME = libft.a
+CC = gcc
+RM = rm -f
+AR = ar rcs
+
+all: $(NAME)
+
+clean:
+		$(RM) $(OBJECTS)
+
+limp:
+		$(RM) a.out
+
+%.o: %.c
+		$(CC) $(CFLAGS) -c -I./ $< -o $@
+
+$(NAME): $(OBJECTS)
+		$(AR) $(NAME) $(OBJECTS)
+
+fclean: clean
+		$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all, clean, fclean, re

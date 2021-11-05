@@ -31,7 +31,7 @@ char		*ft_strnstr(const char *s1, char *s2, size_t n)
 	}
 	return (NULL);
 }
-
+/*
 #include<stdio.h>
 int main()
 {
@@ -42,3 +42,4 @@ int main()
     printf("found: %s\n", strnstr(in, searchingFor, 5) ? "yes" : "no");
     return 0;
 }
+*/

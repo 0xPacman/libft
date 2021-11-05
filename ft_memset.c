@@ -1,8 +1,8 @@
 #include "libft.h"
 
-void		*ft_memset(void *b, int c, size_t n)
+void		*ft_memset(void *s, int c, size_t n)
 {
 	while (n--)
-		((char *)b)[n] = c;
-	return (b);
+		((char *)s)[n] = c;
+	return (s);
 }

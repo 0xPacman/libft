@@ -1,4 +1,4 @@
-#include<stddef.h>
+
 /*char *ft_strchr(char *s, int c)
 {
 	int i;
@@ -19,10 +19,18 @@
 	
 }
 */
-char    *ft_strchr(char *s, int c)
+#include "libft.h"
+
+char	*strchr(const char *s, int c)
+{
+	return ((char *)memchr(s,c,ft_strlen(s) + 1));
+}
+
+/*char    *ft_strchr(const char *s, int c)
 {
     int    i;
     char    *tmp;
+
     i = 0;
     tmp = s;
     if (c == 0)
@@ -30,14 +38,9 @@ char    *ft_strchr(char *s, int c)
     while (tmp[i])
     {
         if (tmp[i] == (char)c)
-            return ((char*)(tmp + i));
-        i = i + 1;
+            return ((char *)(tmp + i));
+        i++;
     }
     return (NULL);
 }
-#include<stdio.h>
-int main()
-{
-	char x[10]="foobar";
-	printf("%s",ft_strchr(x,'x'));
-}
+*/

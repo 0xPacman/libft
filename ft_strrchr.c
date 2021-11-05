@@ -15,6 +15,7 @@ char *ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+/*
 char *xx_strrchr (const char *s, int c)
 {
 	char *rtnval = 0;
@@ -42,3 +43,4 @@ int main () {
    
 	return(0);
 }
+*/

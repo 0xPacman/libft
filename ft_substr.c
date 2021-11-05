@@ -29,10 +29,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-
-#include <stdio.h>
-int main()
-{
-	char s[66] = "fix me please i need to be tested";
-	printf("%s",ft_substr(s,2,2));
-}
