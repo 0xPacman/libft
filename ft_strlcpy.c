@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:32:59 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/02 14:45:45 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/05 17:13:54 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	dst[i] = '\0';
 				return (ft_strlen(src));
-}
-
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char s[] = "hello there, 1337";
-	char buff[19];
-	int r;
-	r = (int)ft_strlcpy(buff,s,5);
-	printf("Copied '%s' into '%s', length %d\n",s,buff,r);
 }

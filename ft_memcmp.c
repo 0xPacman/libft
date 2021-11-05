@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:45:09 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/02 13:21:07 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/05 17:41:33 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,4 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 		}
 	} 
 	return (0);
-}
-#include<string.h>
-#include<stdio.h>
-int main()
-{
-	char s[20] = "foo";
-	char r[20] = "bar";
-	printf("%d",memcmp(s,r,2));
 }

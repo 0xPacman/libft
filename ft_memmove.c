@@ -9,7 +9,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	else if (src > dst)
 	{
-		ft_memcpy(dest, src, len);
+		ft_memcpy(dst, src, n);
 	}
 	return (dst);
 }
