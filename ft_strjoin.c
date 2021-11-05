@@ -11,7 +11,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (str == NULL)
 		return (NULL);
-	while (s1[i] != '\0')
+	while (s1[i])
 	{
 		str[i] = s1[i];
 		i++;
@@ -23,12 +23,4 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	}
 	str[i + j] = '\0';
 	return (str);
-}
-
-#include<stdio.h>
-int main()
-{
-	char s1[12] = "foo";
-	char s2[12] = "bar";
-	printf("%s",ft_strjoin(s1,s2));
 }
