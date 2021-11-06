@@ -21,8 +21,8 @@ int		ft_atoi(const char *str)
 	}
 	while (ft_isdigit(str[i]))
 	{
-		res = res * 10 + str[i] - 48;
+		sum = sum * 10 + str[i] - 48;
 		i++;
 	}
-	return ((int)(sum * sign))
+	return ((int)(sum * sign));
 }

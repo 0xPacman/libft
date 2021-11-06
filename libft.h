@@ -14,22 +14,23 @@ int			ft_putnbr_base(unsigned long long n, int base, int is_upper);
 // memory //
 void		*ft_memset(void *s, int c, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
-void    *ft_memchr(const void *s, int c, size_t n);
+void		*ft_memchr(const void *s, int c, size_t n);
 
 // string //
 char		*ft_strcat(char *s1, const char *s2);
 char		*ft_strncat(char *s1, const char *s2, size_t n);
 size_t		*ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *s);
-char    	*ft_strchr(char *s, int c);
+char		*strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strncpy(char *dst, const char *src, size_t n);
 char		*ft_strndup(const char *s, size_t n);
+char		*ft_strtrim(char const *s1, char const *set);
 
 // numbers //
-int		ft_atoi(const char *str);
-char 	*ft_itoi(int n);
+int			ft_atoi(const char *str);
+char		*ft_itoi(int n);
 // character //
 int			ft_isalpha(int c);
 int			ft_isalnum(int c);
