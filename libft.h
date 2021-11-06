@@ -8,8 +8,8 @@
 // printing //
 void		ft_putchar(char c);
 void		ft_putstr(char const *str);
-int		ft_putnbr(int n);
-int		ft_putnbr_base(unsigned long long n, int base, int is_upper);
+int			ft_putnbr(int n);
+int			ft_putnbr_base(unsigned long long n, int base, int is_upper);
 
 // memory //
 void		*ft_memset(void *s, int c, size_t n);
@@ -24,9 +24,12 @@ size_t		ft_strlen(const char *s);
 char    	*ft_strchr(char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strncpy(char *dst, const char *src, size_t n);
+char		*ft_strndup(const char *s, size_t n);
+
 // numbers //
 int		ft_atoi(const char *str);
-
+char 	*ft_itoi(int n);
 // character //
 int			ft_isalpha(int c);
 int			ft_isalnum(int c);
