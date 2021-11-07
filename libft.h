@@ -5,6 +5,10 @@
 # include <stdlib.h>
 # include <stddef.h>
 
+/***********************
+ * FUNCTION DECLARATIONS
+ ***********************/
+
 // printing //
 void		ft_putchar(int c);
 void		ft_putstr(char const *str);
@@ -37,7 +41,6 @@ char		*ft_strtrim(char const *s1, char const *set);
 int 		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char		*ft_strnstr(const char *s1, char *s2, size_t n);
-
 
 // numbers //
 int			ft_atoi(const char *str);

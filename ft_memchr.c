@@ -2,17 +2,13 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *p = (unsigned char *)s;
-	unsigned char *tofind = NULL;
-	while ((s != NULL) && n--)
+	while (n && (*(unsigned char *)s != (unsigned char)c))
 	{
-		if(*p != (unsigned char)c)
-			p++;
-		else
-		{
-			tofind = p;
-			break;
-		}
+		s = (unsigned char *) s + 1;
+		n--;
 	}
-	return (tofind);
+	if (n)
+		return ((void *)s);
+	else
+		return (NULL);
 }
