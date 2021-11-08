@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 16:57:50 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/06 17:00:29 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/08 20:56:48 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void		*ft_memmove(void *dst, const void *src, size_t n)
 	i = 0;
 	d = (char *)dst;
 	s = (char *)src;
-	if (dst == NULL && src == NULL)
+	if (!dst && !src)
 		return (NULL);
 	if (s < d)
-		while ((int)n-- > 0)
+		while (n--)
 			*(d + n) = *(s + n);
 	else
 		while (i < n)
@@ -32,5 +32,5 @@ void		*ft_memmove(void *dst, const void *src, size_t n)
 			*(d + i) = *(s + i);
 			i++;
 		}
-	return (d);
+	return (dst);
 }

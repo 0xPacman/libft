@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:41:16 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/06 15:23:33 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/08 16:02:18 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t i;
 	char *str;
-	
+
 	if (!s1 || !set)
 		return (NULL);
 	i = 0;
@@ -26,5 +26,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (i && ft_strchr(set, s1[i - 1]))
 		i--;
 	str = ft_substr((char *)s1, 0, i);
-	return (ft_substr(s1, i, l));
+	return (str);
 }

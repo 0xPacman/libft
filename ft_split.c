@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 09:34:29 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/06 12:54:59 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/08 17:38:04 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	k = 0;
 	strs = (char **)malloc(sizeof(char *) * ft_words_counter(s, c) + 1);
-	if (strs == NULL)
+	if (!strs || !s)
 		return (NULL);
 	while(s[i])
 	{
