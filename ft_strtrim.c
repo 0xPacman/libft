@@ -9,23 +9,22 @@
 /*   Updated: 2021/11/06 15:23:33 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t i;
-	size_t l;
-
-	if (s1 == NULL || set == NULL)
+	char *str;
+	
+	if (!s1 || !set)
 		return (NULL);
 	i = 0;
-	while (s1[i] && ft_strchr((char *)set,s1[i]))
-		i++;
-	l = ft_strlen(&s1[i]);
-	if (l)
-		while (s1[i + l - 1] && ft_strrchr((char *)set, s1[i + l - 1]))
-			l--;
+	while (*s1 && ft_strchr((char *)set,*s1))
+		s1++;
+	i = ft_strlen(s1);
+	if (i && ft_strchr(set, s1[i - 1]))
+		i--;
+	str = ft_substr((char *)s1, 0, i);
 	return (ft_substr(s1, i, l));
 }
-*/
