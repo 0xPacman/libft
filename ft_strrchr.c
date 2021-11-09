@@ -2,7 +2,7 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	if (c == 0)
