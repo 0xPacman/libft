@@ -4,27 +4,48 @@ char *ft_strrchr(const char *s, int c)
 {
 	size_t i;
 
-	i = 0;
-	if (c == 0)
-		return ((char *)s + i);
+	i = ft_strlen(s) - 1;
 	while(s[i])
 	{
-		if(s[i] == c)
+		if(s[i] == (char)c)
 			return ((char *)s + i);
-		i++;
+		i--;
 	}
+	if (!c)
+		return ((char *)s);
 	return (NULL);
 }
+
 /*
 #include <stdio.h>
 #include <string.h>
 int main()
 {
-	char s[]="foo-bar-test-fix-it";
-	printf("%s\n",strrchr(s,'-'));
-	printf("%s",ft_strrchr(s,'-'));
+	char s[]="tfoo-bar-fix-i";
+	char *s1=strrchr(s,'t'+256);
+	char *s2=ft_strrchr(s,'t'+256);
+	printf("%s\n",s1);
+	printf("%s\n",s2);
+	printf("cmp: %d",strcmp(s1,s2));
+	}*/
+/*
+char *ft_strrchr(const char *s, int c)
+{
+	size_t i;
+	char *str;
+
+	str = NULL;
+	i  = 0;
+	while (s[i])
+	{
+		if (s[i++] == (char)c)
+			str = (char *)str + i - 1;
+	}
+	if (!c)
+		return ((char *)str + i);
+	return(str);
 }
-*/
+  */
 /*
 char *xx_strrchr (const char *s, int c)
 {
