@@ -4,13 +4,14 @@ char *ft_strrchr(const char *s, int c)
 {
 	int i;
 
-	i = strlen(s);
+	i = 0;
 	if (c == 0)
 		return ((char *)s + i);
-	while(i--)
+	while(s[i])
 	{
 		if(s[i] == c)
-			return ((char *)s + 1);
+			return ((char *)s + i);
+		i++;
 	}
 	return (NULL);
 }
