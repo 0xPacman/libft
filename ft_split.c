@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 09:34:29 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/08 17:38:04 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/10 15:44:57 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,18 @@ char	**ft_split(char const *s, char c)
 	size_t k;
 	char **strs;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	k = 0;
 	strs = (char **)malloc(sizeof(char *) * ft_words_counter(s, c) + 1);
-	if (!strs || !s)
+	if (!strs)
 		return (NULL);
 	while(s[i])
 	{
-		while (s[i] == c) //stop when there's a word
+		while (s[i] == c)
 			i++;
-		j = i; //point to the word
+		j = i;
 		while(s[i] && s[i] != c)
 			i++;
 		if (i > j)
@@ -59,6 +61,8 @@ char	**ft_split(char const *s, char c)
 	strs[k] = NULL;
 	return (strs);
 }
+//stop when there's a word
+
 /*
 #include <stdlib.h>
 #include <stdio.h>

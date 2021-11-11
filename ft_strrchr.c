@@ -1,51 +1,66 @@
 #include "libft.h"
-
+/*
 char *ft_strrchr(const char *s, int c)
 {
-	size_t i;
+	char *str;
 
-	i = ft_strlen(s) - 1;
-	while(s[i])
+	char ch;
+
+	str = (char *)0;
+	while (s)
 	{
-		if(s[i] == (char)c)
-			return ((char *)s + i);
-		i--;
+		ch = *s;
+		if (ch == (char)c)
+			str = (char *)s;
+		s++;
 	}
-	if (!c)
-		return ((char *)s);
-	return (NULL);
+	return (str);
 }
+*//*
+char * ft_strrchr(const char *cp, int ch)
+{
+    char *save;
+    char c;
+	save = (char *)0;
+	if (ch == '\0')
+		return ((char *)cp + ft_strlen(cp));
+    while ((c = *cp)) {
+	if (c == ch)
+	    save = (char *) cp;
+		cp++;
+    }
 
+    return save;
+}
+  */
 /*
 #include <stdio.h>
 #include <string.h>
 int main()
 {
-	char s[]="tfoo-bar-fix-i";
-	char *s1=strrchr(s,'t'+256);
-	char *s2=ft_strrchr(s,'t'+256);
+	char s[]="there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+	char *s1=strrchr(s,'\0');
+	char *s2=ft_strrchr(s,'\0');
 	printf("%s\n",s1);
 	printf("%s\n",s2);
 	printf("cmp: %d",strcmp(s1,s2));
-	}*/
-/*
+}
+
+
+*/
 char *ft_strrchr(const char *s, int c)
 {
-	size_t i;
-	char *str;
-
-	str = NULL;
-	i  = 0;
-	while (s[i])
+	long long i;
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (s[i++] == (char)c)
-			str = (char *)str + i - 1;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	if (!c)
-		return ((char *)str + i);
-	return(str);
+	return(NULL);
 }
-  */
+
 /*
 char *xx_strrchr (const char *s, int c)
 {
@@ -59,19 +74,4 @@ char *xx_strrchr (const char *s, int c)
 	return (rtnval);
 }
 
-#include <stdio.h>
-#include <string.h>
-
-int main () {
-	int len;
-	const char str[] = "http://www.tutorialspoint.com";
-	const char ch = '.';
-	char *ret;
-
-	ret = xx_strrchr(str, ch);
-
-	printf("String after |%c| is - |%s|\n", ch, ret);
-
-	return(0);
-}
 */

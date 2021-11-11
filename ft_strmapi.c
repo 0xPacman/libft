@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 14:36:54 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/06 15:28:15 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/09 16:55:15 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-/*
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -50,4 +50,3 @@ int main()
 	printf("%s",dst);
 	free(src); src = NULL;
 }
-*/
