@@ -1,56 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/11 22:40:58 by ahjadani          #+#    #+#             */
+/*   Updated: 2021/11/11 22:41:35 by ahjadani         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-/*
-char *ft_strrchr(const char *s, int c)
+
+char	*ft_strrchr(const char *s, int c)
 {
-	char *str;
+	long long	i;
 
-	char ch;
-
-	str = (char *)0;
-	while (s)
-	{
-		ch = *s;
-		if (ch == (char)c)
-			str = (char *)s;
-		s++;
-	}
-	return (str);
-}
-*//*
-char * ft_strrchr(const char *cp, int ch)
-{
-    char *save;
-    char c;
-	save = (char *)0;
-	if (ch == '\0')
-		return ((char *)cp + ft_strlen(cp));
-    while ((c = *cp)) {
-	if (c == ch)
-	    save = (char *) cp;
-		cp++;
-    }
-
-    return save;
-}
-  */
-/*
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char s[]="there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-	char *s1=strrchr(s,'\0');
-	char *s2=ft_strrchr(s,'\0');
-	printf("%s\n",s1);
-	printf("%s\n",s2);
-	printf("cmp: %d",strcmp(s1,s2));
-}
-
-
-*/
-char *ft_strrchr(const char *s, int c)
-{
-	long long i;
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
@@ -58,20 +23,5 @@ char *ft_strrchr(const char *s, int c)
 			return ((char *)s + i);
 		i--;
 	}
-	return(NULL);
+	return (NULL);
 }
-
-/*
-char *xx_strrchr (const char *s, int c)
-{
-	char *rtnval = 0;
-
-	while (*s++)
-	{
-		if (*s == c)
-			rtnval = (char*) s;
-	}
-	return (rtnval);
-}
-
-*/
