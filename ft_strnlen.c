@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:56:43 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/09 12:02:33 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/12 00:51:04 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strnlen(const char *s, size_t maxlen)
 	while (i < maxlen)
 	{
 		if (!s[i])
-			break;
+			break ;
 		len++;
 		i++;
 	}

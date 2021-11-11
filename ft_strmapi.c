@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 14:36:54 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/09 16:55:15 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/12 00:49:43 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
-	char	*str;
+	char			*str;
 	unsigned int	i;
 
 	if (!s || !f)
@@ -30,23 +30,4 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
-}
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-char	mapi_test(unsigned int i, char c)
-{
-	return (c + i);
-}
-
-int main()
-{
-	char	*src;
-	char	*dst;
-
-	src = strdup("12345");
-	dst = ft_strmapi(src, mapi_test);
-	printf("%s",dst);
-	free(src); src = NULL;
 }

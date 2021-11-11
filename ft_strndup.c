@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 09:33:24 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/06 10:59:07 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/12 00:38:52 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strndup(const char *s, size_t n)
 {
-	char *str;
+	char	*str;
 
 	str = (char *)malloc(sizeof(char) * n + 1);
 	if (str == NULL)
