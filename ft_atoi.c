@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:33:10 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/10 15:18:04 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:59:26 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	long	sum;
-	size_t	sign;
-	size_t	i;
+	int		sum;
+	int		sign;
+	int		i;
 
 	sum = 0;
 	sign = 1;
@@ -35,5 +35,5 @@ int	ft_atoi(const char *str)
 		sum = sum * 10 + str[i] - 48;
 		i++;
 	}
-	return ((int)(sum * sign));
+	return ((sum * sign));
 }

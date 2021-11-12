@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:32:59 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/05 17:13:54 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:29:08 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (dstsize == 0)
@@ -25,5 +25,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[i] = '\0';
-				return (ft_strlen(src));
+	return (ft_strlen(src));
 }

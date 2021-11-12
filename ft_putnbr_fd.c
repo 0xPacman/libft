@@ -6,17 +6,17 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:11:00 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/07 13:13:42 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:39:40 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if(n == -2147483648)
+	if (n == -2147483648)
 		ft_putstr_fd("-2147483648", fd);
-	else if(n < 0)
+	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
 		ft_putnbr_fd(-n, fd);
