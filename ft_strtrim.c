@@ -6,7 +6,7 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:41:16 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/12 00:34:57 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:09:00 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = malloc(j - i + 2);
 	if (!str)
 		return (NULL);
-	strlcpy(str, s1 + i, j - i + 2);
+	ft_strlcpy(str, s1 + i, j - i + 2);
 	return (str);
 }

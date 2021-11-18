@@ -6,13 +6,13 @@
 /*   By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 15:25:34 by ahjadani          #+#    #+#             */
-/*   Updated: 2021/11/11 22:48:46 by ahjadani         ###   ########.fr       */
+/*   Updated: 2021/11/14 18:40:18 by ahjadani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	int_lengh(long nb)
+static int	int_lengh(long nb)
 {
 	int	len;
 

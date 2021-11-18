@@ -12,7 +12,22 @@
 
 #include "libft.h"
 
-int	ft_words_counter(char const *s, char c)
+static int	ft_skip(char const *s, int pos, char c)
+{
+	while (s[pos] == c)
+		pos++;
+	return (pos);
+}
+
+static char	**ft_clean(char **strs, int pos)
+{
+	while (--pos >= 0)
+		free(strs[pos]);
+	free(strs);
+	return (NULL);
+}
+
+static int	ft_words_counter(char const *s, char c)
 {
 	unsigned int	i;
 	int				count;
@@ -47,13 +62,14 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
+		i = ft_skip(s, i, c);
 		j = i;
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
 			strs[k++] = ft_strndup(&s[j], i - j);
+		if (!strs[k - 1])
+			return (ft_clean(strs, k - 1));
 	}
 	strs[k] = NULL;
 	return (strs);

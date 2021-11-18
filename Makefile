@@ -6,7 +6,7 @@
 #    By: ahjadani <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 23:12:58 by ahjadani          #+#    #+#              #
-#    Updated: 2021/11/13 21:37:06 by ahjadani         ###   ########.fr        #
+#    Updated: 2021/11/13 22:12:25 by ahjadani         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -88,7 +88,8 @@ rmout:
 $(NAME): $(OBJECTS)
 		$(AR) $(NAME) $(OBJECTS)
 
-bonus: $(BONUS_OBJECTS)
+bonus: $(OBJECTS) $(BONUS_OBJECTS)
+		$(AR) $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
 
 fclean: clean
 		$(RM) $(NAME)
