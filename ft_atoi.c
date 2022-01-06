@@ -34,5 +34,5 @@ int	ft_atoi(const char *str)
 		sum = sum * 10 + str[i] - 48;
 		i++;
 	}
-	return ((sum * sign));
+	return (sum * sign);
 }
